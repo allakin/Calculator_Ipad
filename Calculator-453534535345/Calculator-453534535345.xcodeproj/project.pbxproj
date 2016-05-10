@@ -42,6 +42,7 @@
 				738CFB891CE26BFC007723D7 /* Products */,
 			);
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		738CFB891CE26BFC007723D7 /* Products */ = {
 			isa = PBXGroup;
@@ -259,6 +260,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Swift.Calculator-453534535345";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -273,6 +275,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Swift.Calculator-453534535345";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
