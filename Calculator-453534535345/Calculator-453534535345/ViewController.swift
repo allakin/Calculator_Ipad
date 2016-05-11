@@ -6,20 +6,23 @@
 //  Copyright © 2016 Pavel Anpleenko. All rights reserved.
 //
 
+
+// 1. Добавить Label (+)
+// 2. Добавить iuview (+)
+// 3. Добавить цифры (+)
+// 4. Написать код чтобы выводилился текст на экране по нажатию на кнопку
+
 import UIKit
 
 class ViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+  @IBOutlet weak var dysplayLabel: UILabel!
+  
+  @IBAction func numberButton(sender: UIButton) {
+   
+    let number
+    
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
 
 }
 
