@@ -13,14 +13,27 @@
 // 4. Написать код чтобы выводилился текст на экране по нажатию на цифры (+)
 // 5. Отрезать трое точие когда цифр много (+)
 // 6. Убрать первый 0 (+)
-// 7. Добавить действия между двумя операндами (+)
+// 7. Добавить действия между двумя операндами
+//    Первый операнд
+//    Второй операнд
 
 import UIKit
 
 class ViewController: UIViewController {
+  
   var numberType = false // переменная которая определяет вводится первое чилсо или второе
   var firstOperand: Double = 0 //по умолчанию значение первого оперенда равняется 0
   var twoOperand: Double = 0 //по умолчанию значение второго оперенда равняется 0
+  //переменная которая переводит цифры в строки
+  var currentInput: Double {
+    get {
+      return Double(displayResultLabel.text!)!
+    }
+    set{
+      displayResultLabel.text = "\(newValue)"
+      numberType = false
+    }
+  }
   
   
   @IBOutlet weak var displayResultLabel: UILabel!
@@ -46,6 +59,10 @@ class ViewController: UIViewController {
   
   // действия между двумя операндами
   @IBAction func operandButton(sender: UIButton) {
+    
+    firstOperand = currentInput //переводит первый оперант в текст и запоминает его
+    numberType = false
+    print(firstOperand)
   }
   
 }
