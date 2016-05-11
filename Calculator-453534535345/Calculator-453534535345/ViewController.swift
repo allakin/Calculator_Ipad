@@ -11,18 +11,30 @@
 // 2. Добавить iuview (+)
 // 3. Добавить цифры (+)
 // 4. Написать код чтобы выводилился текст на экране по нажатию на цифры (+)
-// 5. Отрезать трое точие когда цифр много
+// 5. Отрезать трое точие когда цифр много (+)
+// 6. Убрать первый 0 (+)
 
 import UIKit
 
 class ViewController: UIViewController {
+  var numberType = false // переменная которая определяет вводится первое чилсо или второе
   
   @IBOutlet weak var displayResultLabel: UILabel!
   @IBAction func numberButton(sender: UIButton) {
     
     let number = sender.currentTitle! //получает значение при нажатии на кнопку
     
-    displayResultLabel.text = displayResultLabel.text! + number // Мы хотим чтобы displayResultLabel отобразил свой текст + вывел значение полученные из цифр
+    if numberType {
+      // если длина принудительных символов текста displayResultLabel меньше 20
+      if displayResultLabel.text?.characters.count < 20 {
+        displayResultLabel.text = displayResultLabel.text! + number // Мы хотим чтобы displayResultLabel отобразил свой   текст + вывел значение полученные из цифр
+      }
+      
+    } else {
+      // если же нет то текст в дисплее получает значение из цифр и меняет присваемыю переменную с фолс на тру и переменной numberType чтобы запустить условие при тру
+      displayResultLabel.text = number
+      numberType = true
+    }
     
   }
   
