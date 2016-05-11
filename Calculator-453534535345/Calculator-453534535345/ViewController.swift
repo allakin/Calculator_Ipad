@@ -28,6 +28,8 @@ class ViewController: UIViewController {
       // если длина принудительных символов текста displayResultLabel меньше 20
       if displayResultLabel.text?.characters.count < 20 {
         displayResultLabel.text = displayResultLabel.text! + number // Мы хотим чтобы displayResultLabel отобразил свой   текст + вывел значение полученные из цифр
+      }else {
+        displayResultLabel.text = displayResultLabel.text!
       }
       
     } else {
