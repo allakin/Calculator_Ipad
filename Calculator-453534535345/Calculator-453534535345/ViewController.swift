@@ -17,6 +17,7 @@
 //    Первый операнд
 //    Второй операнд
 // 8. Добавить кнопку очистки дисплея (+)
+// 9. Добавить +/- (+)
 
 import UIKit
 
@@ -102,7 +103,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func plusMinusButton(sender: UIButton) {
-    displayResultLabel.text = operatorSing
+    currentInput = -currentInput
   }
   
 }
