@@ -16,7 +16,7 @@
 // 7. Добавить действия между двумя операндами (+)
 //    Первый операнд
 //    Второй операнд
-// 8. 
+// 8. Добавить кнопку очистки дисплея (+)
 
 import UIKit
 
@@ -94,5 +94,8 @@ class ViewController: UIViewController {
     }
   }
   
+  @IBAction func clearButton(sender: UIButton) {
+    displayResultLabel.text = "0"
+  }
 }
 
