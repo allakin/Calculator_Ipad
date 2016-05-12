@@ -18,6 +18,8 @@
 //    Второй операнд
 // 8. Добавить кнопку очистки дисплея (+)
 // 9. Добавить +/- (+)
+// 10. Добавить проценты
+// 11. Добавить плавующую точку (+)
 
 import UIKit
 
@@ -28,6 +30,8 @@ class ViewController: UIViewController {
   var twoOperand: Double = 0 //по умолчанию значение второго оперенда равняется 0
   //переменная которая переводит цифры в строки
   var operatorSing: String = "" // знак кнопки на которую мы нажимаем
+  var dotIsPlaced = false // переменная которая нужна для отпределения ставили дробную точку или нет
+  
   
   var currentInput: Double {
     get {
@@ -100,11 +104,25 @@ class ViewController: UIViewController {
     twoOperand = 0
     currentInput = 0
     displayResultLabel.text = "0" //очищает значения дисплея
+    numberType = false
   }
   
   @IBAction func plusMinusButton(sender: UIButton) {
     currentInput = -currentInput
   }
+  
+  @IBAction func persentButton(sender: UIButton) {
+  }
+  
+  @IBAction func tochkaButton(sender: UIButton) {
+    
+    if numberType && !dotIsPlaced {
+      displayResultLabel.text = displayResultLabel.text! + "."
+      dotIsPlaced = true
+    }
+    
+  }
+  
   
 }
 
