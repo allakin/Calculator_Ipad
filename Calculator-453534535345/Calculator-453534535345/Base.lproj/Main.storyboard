@@ -43,6 +43,9 @@
                                         <state key="normal" title="+/-">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="plusMinusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ncM-6X-PgR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcF-16-8PL">
                                         <rect key="frame" x="220" y="1" width="108" height="150"/>

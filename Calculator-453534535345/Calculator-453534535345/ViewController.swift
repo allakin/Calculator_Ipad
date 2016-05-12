@@ -95,7 +95,15 @@ class ViewController: UIViewController {
   }
   
   @IBAction func clearButton(sender: UIButton) {
-    displayResultLabel.text = "0"
+    firstOperand = 0
+    twoOperand = 0
+    currentInput = 0
+    displayResultLabel.text = "0" //очищает значения дисплея
   }
+  
+  @IBAction func plusMinusButton(sender: UIButton) {
+    displayResultLabel.text = operatorSing
+  }
+  
 }
 
