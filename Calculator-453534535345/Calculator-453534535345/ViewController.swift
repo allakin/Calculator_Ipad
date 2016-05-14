@@ -38,6 +38,7 @@ class ViewController: UIViewController {
       return Double(displayResultLabel.text!)!
     }
     set{
+      let value = "\(newValue)"
       displayResultLabel.text = "\(newValue)"
       numberType = false
     }
@@ -45,6 +46,7 @@ class ViewController: UIViewController {
   
   
   @IBOutlet weak var displayResultLabel: UILabel!
+  
   @IBAction func numberButton(sender: UIButton) {
     
     let number = sender.currentTitle! //получает значение при нажатии на кнопку
@@ -112,17 +114,50 @@ class ViewController: UIViewController {
   }
   
   @IBAction func persentButton(sender: UIButton) {
+    if numberType {
+      twoOperand = currentInput
+    }
+    displayTwoOperand{$0 * $1 / 100}
   }
   
   @IBAction func tochkaButton(sender: UIButton) {
     
     if numberType && !dotIsPlaced {
       displayResultLabel.text = displayResultLabel.text! + "."
-      dotIsPlaced = true
     }
     
   }
   
+  @IBAction func deleteLastNumber(sender: UIButton) {
+    if numberType {
+      firstOperand = currentInput
+    }
+    var myString = String(firstOperand)
+    var array = myString.componentsSeparatedByString(".")
+    if array[0] == "0" {
+      array.removeLast()
+      displayResultLabel.text! = "\(array)"
+    }
+    
+    //let x = firstOperand
+    //var myString = String(x)
+    //var name: String
+    //name = myString
+    //var truncated = name.substringToIndex(name.endIndex.predecessor())
+    //displayResultLabel.text = truncated
+    
+    
+    //let x : Int = 42
+    //var myString = String(x)
+    
+    //var name: String = "Dolphin"
+    //var truncated = name.substringToIndex(name.endIndex.predecessor())
+    //print(name)      // "Dolphin"
+    //print(truncated) // "Dolphi"
+    
+
+    
+  }
   
 }
 
